@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./wp1850727-depression-wallpapers.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 22px;
+    color: #f2f2f2;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255,255,255,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper.active-pop{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height: 510px;
+}
+
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+}
+.wrapper .form-box.login{
+    transition: .1sec ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: darkgray;
+    font-size: 2em;
+    color: #000;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: darkgrey;
+    text-align: center;
+    user-select: none;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #f2f2f2;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: darkgray;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -3px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    font-size: .8em;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 10px;
+    font-size: 1.2em;
+    color: darkgray;
+    line-height: 50px;
+}
+
+.remember-forget{
+    font-size: .8em;
+    color: darkgray;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forget label input{
+    accent-color: darkgray;
+    margin-right: 5px;
+}
+
+.remember-forget a{
+    color: darkgray;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.remember-forget a:hover{
+    text-decoration: underline;
+    color: rgb(0, 162, 255);
+}
+
+.btn{
+    width: 100%;
+    height: 35px;
+    background: darkgray;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1em;
+    color: #000;
+    font-weight: 700;
+}
